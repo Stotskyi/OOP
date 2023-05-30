@@ -55,7 +55,7 @@ public class LibraryCard {
     }
 
     private void Print(String sentence){
-        System.out.println(sentence);
+        System.out.print(sentence);
     }
 
     private void ChangeCountOfBok(String res){
@@ -68,6 +68,8 @@ public class LibraryCard {
                 {
                     Print("Enter a number:");
                     IncrementTakenBooks(scanner.nextInt());
+                    Print(String.format("Books in list: %d", takenBooks));
+
                 }
                 else if(choice.equals("2"))
                 {

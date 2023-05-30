@@ -1,6 +1,6 @@
 public class Task3 {
     public Task3() {
-        super();
+       
     }
 
     public void Init(){

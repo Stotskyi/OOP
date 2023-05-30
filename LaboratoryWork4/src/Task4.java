@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Task4 {
     public Task4() {
-        super();
+      
     }
 
     public void Init() {

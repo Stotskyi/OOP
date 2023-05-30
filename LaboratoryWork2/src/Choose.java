@@ -13,23 +13,23 @@ public class Choose {
 
     public void Run() {
         switch (task) {
-            case "Task1":
+            case "1":
             QuadraticEquation obj = new QuadraticEquation();
             obj.Launch();
                 break;
-            case "Task2":
+            case "2":
             Quadrant ob = new Quadrant();
             ob.Launch();
                 break;
-            case "Task3":
+            case "3":
             CheckNumbers num = new CheckNumbers();
             num.Launch();
                 break;
-            case "Task4":
+            case "4":
             FindX x = new FindX();
             x.Launch();
                 break;
-            case "Task5":
+            case "5":
             Calculator calc = new Calculator();
             calc.Launch();
                 break;

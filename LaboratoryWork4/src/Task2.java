@@ -1,11 +1,12 @@
 public class Task2 {
     public Task2() {
-        super();
+       
     }
 
     public void Init() {
         int[] nums = { 2, 17, 13, 6, 22, 31, 45, 66, 100, -18 };
 
+       
         // while loop
         System.out.println("While loop:");
         int i = 0;
@@ -15,6 +16,8 @@ public class Task2 {
         }
         System.out.println();
 
+        
+        
         // for loop
         System.out.println("For loop:");
         for (int j = 0; j < nums.length; j++) {
@@ -30,6 +33,8 @@ public class Task2 {
             i += 2;
         }
         System.out.println();
+
+
 
         // for loop for even indices
         System.out.println("For loop for even indices:");
