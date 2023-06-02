@@ -73,6 +73,7 @@ public class Car {
     
 
     public Boolean IsRepaired = false;
+    
     public static void main(String[] args) throws Exception {
         TestingCars a = new TestingCars();
         a.Init();

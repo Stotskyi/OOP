@@ -9,17 +9,17 @@ public class Task2 {
     }
 
     public void GetTheSmallestNumber(){
-        System.out.println("The smalllest number is: " + CalculateSMallestNumber());
+        System.out.println("The smalllest number is: " + CalculateSMallestNumber(first,second,third));
     }
-    private int CalculateSMallestNumber(){
-        if(first < second && first < third){
-            return first;
+    private int CalculateSMallestNumber(int f,int s,int t){
+        if(f < s && f < t){
+            return f;
         }
-        else if(second < first && second < third){
-            return second;
+        else if(s < f && s < t){
+            return s;
         }
         else{
-            return third;
+            return t;
         }
     }
 
