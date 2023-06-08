@@ -13,11 +13,8 @@ public class RandomNumberFile {
         }
 
         String filename = args[0];
-        int numberCount = Integer.parseInt(args[1]);
-        int minValue = Integer.parseInt(args[2]);
-        int maxValue = Integer.parseInt(args[3]);
-
-        // Перевірка існування файлу
+        
+        // Перевірка існування файлу      
         File file = new File(filename);
         if (!file.exists()) {
             try {
@@ -29,29 +26,17 @@ public class RandomNumberFile {
         }
 
         // Запис послідовності випадкових чисел у файл
-        try (FileWriter writer = new FileWriter(file)) {
-            for (int i = 0; i < numberCount; i++) {
-                int randomNumber = (int) (Math.random() * (maxValue - minValue + 1)) + minValue;
-                writer.write(String.valueOf(randomNumber));
-                writer.write(System.lineSeparator());
-            }
-            System.out.println("Numbers successfully written to file.");
-        } catch (IOException e) {
-            System.out.println("Error writing to file: " + e.getMessage());
-        }
+        Write write = new Write(file,args);
+        write.WriteToFile();
 
         // Читання інформації з файлу та виведення на консоль
-        try (FileReader reader = new FileReader(file)) {
-            BufferedReader bufferedReader = new BufferedReader(reader);
-            String line;
-            System.out.println("Contents of the file:");
-            while ((line = bufferedReader.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            System.out.println("Error reading file: " + e.getMessage());
-        }
+        Read read = new Read(file);
+        read.ReadFromFile();
     }
+    
+    
+
+   
 }
 
 //javac RandomNumberFile.java
